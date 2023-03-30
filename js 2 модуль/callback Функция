@@ -1,0 +1,14 @@
+function learnJs(lang, Callback){
+    console.log(`я учу : ${lang}`);
+    Callback()
+};
+
+function a(){
+    console.log('я выучил')
+}
+
+learnJs('java script', a)
+
+callback // позволяет быть нам увереным в том что определенный код не начнет исполнение до того момента 
+// пока другой код не завершит свое исполнение
+
