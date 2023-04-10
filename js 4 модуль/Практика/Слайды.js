@@ -32,8 +32,8 @@ window.addEventListener('DOMContentLoaded', () => {
           if (target == item) {
             hideTabcontent();
             showTabContent(i);
-          }
-        })
-      }
-    })
-  })
+          } 
+        });
+      };
+    });
+})

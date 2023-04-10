@@ -57,7 +57,7 @@ function count (num) {
     return this*num
 }
 
-const double  = count.bind(2)
+const double = count.bind(2)
 console.log(double(3))
 console.log(double(13))
 // 1) обычная функция this = window, но если use strict - undefined
@@ -78,7 +78,7 @@ const object = {
     num: 5,
     sayNember: function () {
         const say = () => {
-            console.lot(this)
+            console.log(this)
         };
         say()
     }
@@ -90,3 +90,14 @@ object.sayNember()
 
 const doub = a => a * 2 //скороченая колбек функция return сам поставиться 
 console.log(doub(4))
+
+Вывод
+// Сама по себе - this относится к глобальному объекту (window).
+// В методе - this относится к родительскому объекту.
+// В функции - this относится к глобальному объекту.
+// В функции в 'strict mode' - this = undefined.
+// В стрелочной функции - this относится к контексту где функция была создана.
+// В событии - this ссылается на элемент запустивший событие.
+
+
+
