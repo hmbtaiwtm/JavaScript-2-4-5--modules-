@@ -35,14 +35,14 @@
 
 // let number = 5;
 
-// function logNumber() {   - 1
+// function logNumber() {   //- 1
 //     let number = 4; // - 3
-//     console.log(number)  - 4
+//     console.log(number)//- 4
 // }
 
-// number = 6;  - 5
+// number = 6; // - 5
 
-// logNumber()  - 2
+// logNumber() // - 2
 
 // ВОТ У НАС ЕСТЬ ФУНКЦИЯ ПРОЙДЕМСЯ ПО НЕЙ КАК ИМЕННО ОНА РАБОТАЕТ В КОДЕ И КАКИЕ ЭТАПЫ ПРОХОДИТ
 // СНАЧАЛА ОНА БЫЛА СОЗДАНА (1) И В КАКОЙТО МОМЕНТ ВЫЗЫВАЕТЬСЯ В КОДЕ (2) ДАЛЬШЕ ФУНКЦИЯ СТАРТУЕТ С ТОГО ЧТО ОНА
@@ -62,39 +62,39 @@
 // ЛОКАЛЬНЫМИ ПЕРЕМЕННЫМИ ЛОКАЛЬНЫМИ 
 // ПРИМЕР 
 
-let number = 5;
+// let number = 5;
 
-function logNumber() {  
-    let number = 4; 
-    console.log(number) 
-}
+// function logNumber() {  
+//     let number = 4; 
+//     console.log(number) 
+// }
 
-number = 6; 
+// number = 6; 
 
-logNumber() 
+// logNumber() 
 
-number = 8; // ВОТ НОВОЕ ЗНАЧЕНИЕ
+// number = 8; // ВОТ НОВОЕ ЗНАЧЕНИЕ
 
-logNumber()   // ВОТ НАГЛЯДНЫЙ ПРИМЕР
+// logNumber()   // ВОТ НАГЛЯДНЫЙ ПРИМЕР
 
-// СНОВА ВЫЗВАЛИ ФУНКЦИЮ И ОНА СОЗДАЛА НОВОЕ ЛЕКСИЧЕСКОЕ ОКРУЖЕНИЕ И В КОДЕ ВЫВЕДЕТЬСЯ 8 
+// // СНОВА ВЫЗВАЛИ ФУНКЦИЮ И ОНА СОЗДАЛА НОВОЕ ЛЕКСИЧЕСКОЕ ОКРУЖЕНИЕ И В КОДЕ ВЫВЕДЕТЬСЯ 8 
 
 
-function createCounter() { // - 1
-    let counter = 0; // - 3
+// function createCounter() { // - 1
+//     let counter = 0; // - 3
 
-    const myFunction = function(){ // - 4
-        counter = counter + 1; // - 5
-        return counter; // - 10
-    }
+//     const myFunction = function(){ // - 4
+//         counter = counter + 1; // - 5
+//         return counter; // - 10
+//     }
 
-    return myFunction // - 6
-}
+//     return myFunction // - 6
+// }
 
-const increment = createCounter() // - 2
-const c1 = increment(); // - 7
-const c2 = increment(); // - 8
-const c3 = increment(); // - 9
+// const increment = createCounter() // - 2
+// const c1 = increment(); // - 7
+// const c2 = increment(); // - 8
+// const c3 = increment(); // - 9
 
 // СНАЧАЛА МЫ СОЗДАЕМ ПЕРЕМЕННУЮ (1) И ПРИСВАИВАЕМ ЕЙ ВЫПОЛНЕНИЕ ФУНКЦИИ ДАЛЬШЕ  В (2) МЫ СОЗДАЕМ НОВУЮ ПЕРЕМЕННУЮ
 // КОТОРАЯ ИЗНАЧАЛЬНО undefined ОНА ПОМЕЩАЕТЬСЯ КАК БЫ В ГЛОБАЛЬНУЮ ОБЛАСТЬ ВЫПОЛНЕНИЯ И ДАЛЬШЕ ИДЕТ ВЫЗОВ ФУНКЦИИ 
